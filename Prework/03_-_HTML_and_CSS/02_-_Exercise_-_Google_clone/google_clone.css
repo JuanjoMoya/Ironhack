@@ -1,0 +1,279 @@
+head {
+  text-align: center;
+}
+
+
+header {
+}
+
+
+#firstHeadLink {
+  width: 500px;
+  height: 20px;
+  padding-top: 20px;
+  padding-right: 0px;
+  padding-bottom: 0px;
+  padding-left: 900px;
+}
+
+
+.buttonGmail {
+  background-color: white;
+  color: #000;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  line-height: 24px;
+  text-decoration: none;
+
+  padding-left: 10px;
+  padding-right: 0px;
+}
+.buttonGmail:hover {
+  text-decoration: underline;
+}
+
+
+.buttonImages {
+  background-color: white;
+  color: #000;
+  font-size: 13px;
+  font-family: arial, sans-serif;
+  line-height: 24px;
+  text-decoration: none;
+  padding-left: 10px;
+  padding-right: 0px;
+}
+.buttonImages:hover {
+  text-decoration: underline;
+}
+
+
+.googleButton1 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+
+.buttonSignin {
+  background-color: #4285f4;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  outline: none;
+  display: inline-block;
+  font-size: 13px;
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 2px;
+  font-family: arial, sans-serif;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+
+
+#mainArticle {
+  width: 600px;
+  height: 600px;
+  background-color: white;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-bottom: 2px;
+  padding-left: 2px;
+  margin: auto;
+}
+
+
+#firstContainer {
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  padding-top: 160px;
+  padding-right: 150px;
+  padding-bottom: 0px;
+  padding-left: 100px;
+  margin: 28px;
+}
+
+
+.searchBox {
+  border: 1px solid #ccc;
+  width: 250px;
+  height: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  background: transparent;
+  padding-top: 0px;
+  padding-right: 150px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  margin: 28px;
+}
+
+
+.googleMicro {
+  padding-top: 5px;
+  padding-left: 378px;
+}
+
+
+.buttonGoogleSearch {
+  font-weight: bold;
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: 13px;
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 2px;
+  font-family: arial, sans-serif;
+  min-width: 255px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 140px;
+}
+.buttonGoogleSearch:hover {
+  color: black;
+  border: 1px solid #ccc;
+}
+
+
+.buttonFeelLucky {
+  font-weight: bold;
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: 13px;
+  line-height: 28px;
+  padding: 0 12px;
+  border-radius: 2px;
+  font-family: arial, sans-serif;
+  min-width: 255px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  margin-left: 5px;
+}
+.buttonFeelLucky:hover {
+  color: black;
+  border: 1px solid #ccc;
+}
+
+
+
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #F5F5F5;
+  font-size: 20px;
+  /* corrección error: el footer si aumento o reduzco el zoom del browser no se posiciona correctamente, trata de que su position sea fixed, para que quede siempre en la misma posición. */
+  position: fixed;
+
+}
+
+
+.buttonAdvertising {
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: small;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 27px;
+  padding-right: 27px;
+  margin 0px;
+}
+.buttonAdvertising:hover {
+  text-decoration: underline;
+}
+
+
+.buttonBusiness {
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: small;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 0px;
+  padding-right: 27px;
+  margin 0px;
+}
+.buttonBusiness:hover {
+  text-decoration: underline;
+}
+
+
+.buttonAbout {
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: small;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 0px;
+  padding-right: 27px;
+  margin 0px;
+}
+.buttonAbout:hover {
+  text-decoration: underline;
+}
+
+
+.buttonPrivacy {
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: small;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 760px;
+  padding-right: 27px;
+  margin 0px;
+}
+.buttonPrivacy:hover {
+  text-decoration: underline;
+}
+
+
+.buttonTerms {
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: small;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 0px;
+  padding-right: 27px;
+  margin 0px;
+}
+.buttonTerms:hover {
+  text-decoration: underline;
+}
+
+
+.buttonSettings {
+  background-color: #F5F5F5;
+  color: grey;
+  font-size: small;
+  font-family: arial, sans-serif;
+  line-height: 40px;
+  text-decoration: none;
+  padding-left: 0px;
+  padding-right: 27px;
+  margin 0px;
+}
+.buttonSettings:hover {
+  text-decoration: underline;
+}
+

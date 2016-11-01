@@ -1,0 +1,20 @@
+<h1>My First Sinatra</h1>
+<p>
+  <b>Author:</b>
+  Izzy Ironside
+</p>
+
+<% if Date.today.saturday? %>
+  <p>
+    Izzy Ironside is <strong>NOT</strong>
+    a fan for Saturdays like today.
+  </p>
+<% end %>
+<br>
+<%=Date.today %>
+<br>
+<%= @greeting %>
+<br>
+<%= Time.now %>
+<br>
+<%= @time.strftime("%H") %>

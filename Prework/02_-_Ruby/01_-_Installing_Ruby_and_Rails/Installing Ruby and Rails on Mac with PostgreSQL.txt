@@ -1,0 +1,781 @@
+Last login: Fri Aug 19 14:25:03 on ttys000
+iMac-de-Juanjo:~ Juanjo$ brew install rbenv ruby-build
+==> Installing dependencies for rbenv: autoconf, pkg-config, openssl, ruby-build
+==> Installing rbenv dependency: autoconf
+==> Downloading https://homebrew.bintray.com/bottles/autoconf-2.69.el_capitan.bo
+######################################################################## 100,0%
+==> Pouring autoconf-2.69.el_capitan.bottle.4.tar.gz
+==> Caveats
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/autoconf
+==> Summary
+🍺  /usr/local/Cellar/autoconf/2.69: 70 files, 3.0M
+==> Installing rbenv dependency: pkg-config
+==> Downloading https://homebrew.bintray.com/bottles/pkg-config-0.29.1_1.el_capi
+######################################################################## 100,0%
+==> Pouring pkg-config-0.29.1_1.el_capitan.bottle.tar.gz
+🍺  /usr/local/Cellar/pkg-config/0.29.1_1: 10 files, 627.3K
+==> Installing rbenv dependency: openssl
+==> Downloading https://homebrew.bintray.com/bottles/openssl-1.0.2h_1.el_capitan
+######################################################################## 100,0%
+==> Pouring openssl-1.0.2h_1.el_capitan.bottle.tar.gz
+==> Using the sandbox
+==> Caveats
+A CA file has been bootstrapped using certificates from the system
+keychain. To add additional certificates, place .pem files in
+  /usr/local/etc/openssl/certs
+
+and run
+  /usr/local/opt/openssl/bin/c_rehash
+
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+Apple has deprecated use of OpenSSL in favor of its own TLS and crypto libraries
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/openssl/lib
+    CPPFLAGS: -I/usr/local/opt/openssl/include
+
+==> Summary
+🍺  /usr/local/Cellar/openssl/1.0.2h_1: 1,691 files, 12M
+==> Installing rbenv dependency: ruby-build
+==> Downloading https://github.com/rbenv/ruby-build/archive/v20160602.tar.gz
+==> Downloading from https://codeload.github.com/rbenv/ruby-build/tar.gz/v201606
+######################################################################## 100,0%
+==> ./install.sh
+🍺  /usr/local/Cellar/ruby-build/20160602: 282 files, 155.5K, built in 3 seconds
+==> Installing rbenv
+==> Downloading https://homebrew.bintray.com/bottles/rbenv-1.0.0.el_capitan.bott
+######################################################################## 100,0%
+==> Pouring rbenv-1.0.0.el_capitan.bottle.tar.gz
+==> Caveats
+Rbenv stores data under ~/.rbenv by default. If you absolutely need to
+store everything under Homebrew's prefix, include this in your profile:
+  export RBENV_ROOT=/usr/local/var/rbenv
+
+To enable shims and autocompletion, run this and follow the instructions:
+  rbenv init
+==> Summary
+🍺  /usr/local/Cellar/rbenv/1.0.0: 36 files, 62.0K
+iMac-de-Juanjo:~ Juanjo$ rbenv init
+# Load rbenv automatically by appending
+# the following to ~/.bash_profile:
+
+eval "$(rbenv init -)"
+
+iMac-de-Juanjo:~ Juanjo$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+iMac-de-Juanjo:~ Juanjo$ source ~/.bash_profile
+iMac-de-Juanjo:~ Juanjo$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+iMac-de-Juanjo:~ Juanjo$ source ~/.bash_profile
+iMac-de-Juanjo:~ Juanjo$ echo 'if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi' >> ~/.bash_profile
+iMac-de-Juanjo:~ Juanjo$ source ~/.bash_profile
+iMac-de-Juanjo:~ Juanjo$ rbenv install 2.3.1
+Downloading ruby-2.3.1.tar.bz2...
+-> https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.bz2
+Installing ruby-2.3.1...
+Installed ruby-2.3.1 to /Users/Juanjo/.rbenv/versions/2.3.1
+
+iMac-de-Juanjo:~ Juanjo$ rbenv global 2.3.1
+iMac-de-Juanjo:~ Juanjo$ ruby -v
+ruby 2.3.1p112 (2016-04-26 revision 54768) [x86_64-darwin15]
+iMac-de-Juanjo:~ Juanjo$ git config --global color.ui true
+iMac-de-Juanjo:~ Juanjo$ git config --global user.name "JuanjoMoya"
+iMac-de-Juanjo:~ Juanjo$ git config --global user.email "juanjo.moya1@gmail.com"
+iMac-de-Juanjo:~ Juanjo$ ssh-keygen -t rsa -C "juanjo.moya1@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Juanjo/.ssh/id_rsa): KeySshGitConfig.txt
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in KeySshGitConfig.txt.
+Your public key has been saved in KeySshGitConfig.txt.pub.
+The key fingerprint is:
+SHA256:DPoqKqC51oW75IF7DO9Q0OgdOphihh6ygt62r0kgXp0 juanjo.moya1@gmail.com
+The key's randomart image is:
++---[RSA 2048]----+
+|                 |
+|  o              |
+| o o  .          |
+|+.+ o..o         |
+|BO +oE  S        |
+|@oB. o           |
+|**=+o .          |
+|*.OBo.           |
+|==+X*.           |
++----[SHA256]-----+
+iMac-de-Juanjo:~ Juanjo$ cat ~/.ssh/id_rsa.pub
+cat: /Users/Juanjo/.ssh/id_rsa.pub: No such file or directory
+iMac-de-Juanjo:~ Juanjo$ ls -al ~/.ssh
+total 24
+drwx------   5 Juanjo  staff   170 18 ago 16:37 .
+drwxr-xr-x@ 32 Juanjo  staff  1088 19 ago 15:23 ..
+-rw-------   1 Juanjo  staff  1766 18 ago 16:37 github_rsa
+-rw-r--r--   1 Juanjo  staff   403 18 ago 16:37 github_rsa.pub
+-rw-r--r--   1 Juanjo  staff   803 18 ago 16:44 known_hosts
+iMac-de-Juanjo:~ Juanjo$ ls -al ~/.ssh
+total 24
+drwx------   5 Juanjo  staff   170 18 ago 16:37 .
+drwxr-xr-x@ 32 Juanjo  staff  1088 19 ago 15:23 ..
+-rw-------   1 Juanjo  staff  1766 18 ago 16:37 github_rsa
+-rw-r--r--   1 Juanjo  staff   403 18 ago 16:37 github_rsa.pub
+-rw-r--r--   1 Juanjo  staff   803 18 ago 16:44 known_hosts
+iMac-de-Juanjo:~ Juanjo$ ssh-keygen -t rsa -b 4096 -C "juanjo.moya1@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Juanjo/.ssh/id_rsa): KeySshGitConfig.txt
+KeySshGitConfig.txt already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in KeySshGitConfig.txt.
+Your public key has been saved in KeySshGitConfig.txt.pub.
+The key fingerprint is:
+SHA256:brUTK2HUR2w9ceg3BybkRH5YaNtSD3QnzcynVBDiFC4 juanjo.moya1@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|           +O=B@=|
+|         . O*+X+B|
+|        . EoBO.*.|
+|       .   oo.+.+|
+|        S o  . .o|
+|       o o +     |
+|        + +      |
+|       . . .     |
+|                 |
++----[SHA256]-----+
+iMac-de-Juanjo:~ Juanjo$ ls -al ~/.ssh
+total 24
+drwx------   5 Juanjo  staff   170 18 ago 16:37 .
+drwxr-xr-x@ 32 Juanjo  staff  1088 19 ago 15:23 ..
+-rw-------   1 Juanjo  staff  1766 18 ago 16:37 github_rsa
+-rw-r--r--   1 Juanjo  staff   403 18 ago 16:37 github_rsa.pub
+-rw-r--r--   1 Juanjo  staff   803 18 ago 16:44 known_hosts
+iMac-de-Juanjo:~ Juanjo$ ssh-keygen -t rsa -b 4096 -C "juanjo.moya1@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Juanjo/.ssh/id_rsa): KeySshGitConfig.txt
+KeySshGitConfig.txt already exists.
+Overwrite (y/n)? y
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in KeySshGitConfig.txt.
+Your public key has been saved in KeySshGitConfig.txt.pub.
+The key fingerprint is:
+SHA256:L3ymaC54OSM+rsEVZhtfi2TpHZSDfLMn8BeOELKwnSY juanjo.moya1@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+| . ...o..        |
+|  + +=o= .       |
+| E X +=o* .      |
+|  = O +=o+       |
+|   o + oS        |
+|. .    . .       |
+|.. . .  o +      |
+| .+ * .. =       |
+|.+o+ *o .        |
++----[SHA256]-----+
+iMac-de-Juanjo:~ Juanjo$ ssh-add ~/.ssh/KeySshGitConfig.txt
+/Users/Juanjo/.ssh/KeySshGitConfig.txt: No such file or directory
+iMac-de-Juanjo:~ Juanjo$ ls -al ~/.ssh
+total 24
+drwx------   5 Juanjo  staff   170 18 ago 16:37 .
+drwxr-xr-x@ 32 Juanjo  staff  1088 19 ago 15:23 ..
+-rw-------   1 Juanjo  staff  1766 18 ago 16:37 github_rsa
+-rw-r--r--   1 Juanjo  staff   403 18 ago 16:37 github_rsa.pub
+-rw-r--r--   1 Juanjo  staff   803 18 ago 16:44 known_hosts
+iMac-de-Juanjo:~ Juanjo$ eval "$(ssh-agent -s)"
+Agent pid 28062
+iMac-de-Juanjo:~ Juanjo$ ssh-keygen -t rsa -b 4096 -C "juanjo.moya1@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Juanjo/.ssh/id_rsa): 
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /Users/Juanjo/.ssh/id_rsa.
+Your public key has been saved in /Users/Juanjo/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:ZILCyDWaBFgBiQgGA/+Z64MkRRTb94UQKYiF0Krov/Q juanjo.moya1@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|^%**  oo         |
+|@=Boo... .       |
+|.*= o.o + .      |
+|. .o + = .       |
+|o.  +   S        |
+|+ .  .           |
+|.o o.            |
+| .o.o            |
+|  .ooE           |
++----[SHA256]-----+
+iMac-de-Juanjo:~ Juanjo$ ls -al ~/.ssh
+total 40
+drwx------   7 Juanjo  staff   238 19 ago 16:10 .
+drwxr-xr-x@ 32 Juanjo  staff  1088 19 ago 15:23 ..
+-rw-------   1 Juanjo  staff  1766 18 ago 16:37 github_rsa
+-rw-r--r--   1 Juanjo  staff   403 18 ago 16:37 github_rsa.pub
+-rw-------   1 Juanjo  staff  3326 19 ago 16:10 id_rsa
+-rw-r--r--   1 Juanjo  staff   748 19 ago 16:10 id_rsa.pub
+-rw-r--r--   1 Juanjo  staff   803 18 ago 16:44 known_hosts
+iMac-de-Juanjo:~ Juanjo$ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /Users/Juanjo/.ssh/id_rsa: 
+Identity added: /Users/Juanjo/.ssh/id_rsa (/Users/Juanjo/.ssh/id_rsa)
+iMac-de-Juanjo:~ Juanjo$ ssh -T git@github.com
+Permission denied (publickey).
+iMac-de-Juanjo:~ Juanjo$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCkM4hk7iNa01Zex6Kt3zWWJRG9CCNb/r6/uf/0l/q9UL/8ta8QDBmWBXQrm8TIJ0WiwKjJcCLIAwCxM9u6MNAGKQ8BJNGGwdNWVoXzlYnZeOBjhE6qTqyus9+f0/7L2P1nWE8Jw1EYxuCnCE7YnV9Fuh3tptxIBlWl45KWFBnZbqGbS5CNeVtEAwFQu1lLFgBEIULTizhOMhRRlh132FQHkt8lC5yg00oJuvLVo+YtWzVUTJQfDxLLr+eMMx5hTXCMIof3Qt6fu+6cnelqwu0VGfup+zgrJ/dLzvCzvktVgQ7FU9EezGVTPKhjWzyjBqU/qvH8g3euS7wlhFsKQh/SUN9WULEVrv2lOziH7aLWO/CIEf+6NnDCbCkUcyvNweqbWmWhZLpkCHHKcqyeG9bL5QsMT4hilBWI4MEYE4M5vhKVrwxSXg+sqAmOou5M35E87Z0q/s/+3axgM7mvwoOSmuoeN/vIRMUHEnMF724poaKtBBSAnZkXVuyoe1njJTVxHvrj51F+YrnKj2RITldkCWi66RZvb6bVUdu8O9673k6VFtOC8cHcrTXzq39JpXEfzRfX6+cArRQtA0U022D0dpsnztUnPdNuocQKcnzfZYp9nPZ7QIz0pZyoikPu5ipBP9LCZ6pvz/+jQcFaeFRy/Erhzv50wXfROopg5Zf7Aw== juanjo.moya1@gmail.com
+iMac-de-Juanjo:~ Juanjo$ ssh -T git@github.com
+Permission denied (publickey).
+iMac-de-Juanjo:~ Juanjo$ ls -al ~/.ssh
+total 40
+drwx------   7 Juanjo  staff   238 19 ago 16:10 .
+drwxr-xr-x@ 32 Juanjo  staff  1088 19 ago 15:23 ..
+-rw-------   1 Juanjo  staff  1766 18 ago 16:37 github_rsa
+-rw-r--r--   1 Juanjo  staff   403 18 ago 16:37 github_rsa.pub
+-rw-------   1 Juanjo  staff  3326 19 ago 16:10 id_rsa
+-rw-r--r--   1 Juanjo  staff   748 19 ago 16:10 id_rsa.pub
+-rw-r--r--   1 Juanjo  staff   803 18 ago 16:44 known_hosts
+iMac-de-Juanjo:~ Juanjo$ eval "$(ssh-agent -s)"
+Agent pid 28096
+iMac-de-Juanjo:~ Juanjo$ ssh-add ~/.ssh/id_rsa
+Enter passphrase for /Users/Juanjo/.ssh/id_rsa: 
+Identity added: /Users/Juanjo/.ssh/id_rsa (/Users/Juanjo/.ssh/id_rsa)
+iMac-de-Juanjo:~ Juanjo$ pbcopy < ~/.ssh/id_rsa.pub
+iMac-de-Juanjo:~ Juanjo$ ssh -T git@github.com
+Hi JuanjoMoya! You've successfully authenticated, but GitHub does not provide shell access.
+iMac-de-Juanjo:~ Juanjo$ gem install rails -v 4.2.6
+Fetching: i18n-0.7.0.gem (100%)
+Successfully installed i18n-0.7.0
+Fetching: thread_safe-0.3.5.gem (100%)
+Successfully installed thread_safe-0.3.5
+Fetching: tzinfo-1.2.2.gem (100%)
+Successfully installed tzinfo-1.2.2
+Fetching: concurrent-ruby-1.0.2.gem (100%)
+Successfully installed concurrent-ruby-1.0.2
+Fetching: activesupport-4.2.6.gem (100%)
+Successfully installed activesupport-4.2.6
+Fetching: rack-1.6.4.gem (100%)
+Successfully installed rack-1.6.4
+Fetching: rack-test-0.6.3.gem (100%)
+Successfully installed rack-test-0.6.3
+Fetching: mini_portile2-2.1.0.gem (100%)
+Successfully installed mini_portile2-2.1.0
+Fetching: pkg-config-1.1.7.gem (100%)
+Successfully installed pkg-config-1.1.7
+Fetching: nokogiri-1.6.8.gem (100%)
+Building native extensions.  This could take a while...
+Successfully installed nokogiri-1.6.8
+Fetching: loofah-2.0.3.gem (100%)
+Successfully installed loofah-2.0.3
+Fetching: rails-html-sanitizer-1.0.3.gem (100%)
+Successfully installed rails-html-sanitizer-1.0.3
+Fetching: rails-deprecated_sanitizer-1.0.3.gem (100%)
+Successfully installed rails-deprecated_sanitizer-1.0.3
+Fetching: rails-dom-testing-1.0.7.gem (100%)
+Successfully installed rails-dom-testing-1.0.7
+Fetching: builder-3.2.2.gem (100%)
+Successfully installed builder-3.2.2
+Fetching: erubis-2.7.0.gem (100%)
+Successfully installed erubis-2.7.0
+Fetching: actionview-4.2.6.gem (100%)
+Successfully installed actionview-4.2.6
+Fetching: actionpack-4.2.6.gem (100%)
+Successfully installed actionpack-4.2.6
+Fetching: activemodel-4.2.6.gem (100%)
+Successfully installed activemodel-4.2.6
+Fetching: arel-6.0.3.gem (100%)
+Successfully installed arel-6.0.3
+Fetching: activerecord-4.2.6.gem (100%)
+Successfully installed activerecord-4.2.6
+Fetching: globalid-0.3.7.gem (100%)
+Successfully installed globalid-0.3.7
+Fetching: activejob-4.2.6.gem (100%)
+Successfully installed activejob-4.2.6
+Fetching: mime-types-data-3.2016.0521.gem (100%)
+Successfully installed mime-types-data-3.2016.0521
+Fetching: mime-types-3.1.gem (100%)
+Successfully installed mime-types-3.1
+Fetching: mail-2.6.4.gem (100%)
+Successfully installed mail-2.6.4
+Fetching: actionmailer-4.2.6.gem (100%)
+Successfully installed actionmailer-4.2.6
+Fetching: thor-0.19.1.gem (100%)
+Successfully installed thor-0.19.1
+Fetching: railties-4.2.6.gem (100%)
+Successfully installed railties-4.2.6
+Fetching: bundler-1.12.5.gem (100%)
+Successfully installed bundler-1.12.5
+Fetching: sprockets-3.7.0.gem (100%)
+Successfully installed sprockets-3.7.0
+Fetching: sprockets-rails-3.1.1.gem (100%)
+Successfully installed sprockets-rails-3.1.1
+Fetching: rails-4.2.6.gem (100%)
+Successfully installed rails-4.2.6
+Parsing documentation for i18n-0.7.0
+Installing ri documentation for i18n-0.7.0
+Parsing documentation for thread_safe-0.3.5
+Installing ri documentation for thread_safe-0.3.5
+Parsing documentation for tzinfo-1.2.2
+Installing ri documentation for tzinfo-1.2.2
+Parsing documentation for concurrent-ruby-1.0.2
+Installing ri documentation for concurrent-ruby-1.0.2
+Parsing documentation for activesupport-4.2.6
+Installing ri documentation for activesupport-4.2.6
+Parsing documentation for rack-1.6.4
+Installing ri documentation for rack-1.6.4
+Parsing documentation for rack-test-0.6.3
+Installing ri documentation for rack-test-0.6.3
+Parsing documentation for mini_portile2-2.1.0
+Installing ri documentation for mini_portile2-2.1.0
+Parsing documentation for pkg-config-1.1.7
+Installing ri documentation for pkg-config-1.1.7
+Parsing documentation for nokogiri-1.6.8
+Installing ri documentation for nokogiri-1.6.8
+Parsing documentation for loofah-2.0.3
+Installing ri documentation for loofah-2.0.3
+Parsing documentation for rails-html-sanitizer-1.0.3
+Installing ri documentation for rails-html-sanitizer-1.0.3
+Parsing documentation for rails-deprecated_sanitizer-1.0.3
+Installing ri documentation for rails-deprecated_sanitizer-1.0.3
+Parsing documentation for rails-dom-testing-1.0.7
+Installing ri documentation for rails-dom-testing-1.0.7
+Parsing documentation for builder-3.2.2
+Installing ri documentation for builder-3.2.2
+Parsing documentation for erubis-2.7.0
+Installing ri documentation for erubis-2.7.0
+Parsing documentation for actionview-4.2.6
+Installing ri documentation for actionview-4.2.6
+Parsing documentation for actionpack-4.2.6
+Installing ri documentation for actionpack-4.2.6
+Parsing documentation for activemodel-4.2.6
+Installing ri documentation for activemodel-4.2.6
+Parsing documentation for arel-6.0.3
+Installing ri documentation for arel-6.0.3
+Parsing documentation for activerecord-4.2.6
+Installing ri documentation for activerecord-4.2.6
+Parsing documentation for globalid-0.3.7
+Installing ri documentation for globalid-0.3.7
+Parsing documentation for activejob-4.2.6
+Installing ri documentation for activejob-4.2.6
+Parsing documentation for mime-types-data-3.2016.0521
+Installing ri documentation for mime-types-data-3.2016.0521
+Parsing documentation for mime-types-3.1
+Installing ri documentation for mime-types-3.1
+Parsing documentation for mail-2.6.4
+Installing ri documentation for mail-2.6.4
+Parsing documentation for actionmailer-4.2.6
+Installing ri documentation for actionmailer-4.2.6
+Parsing documentation for thor-0.19.1
+Installing ri documentation for thor-0.19.1
+Parsing documentation for railties-4.2.6
+Installing ri documentation for railties-4.2.6
+Parsing documentation for bundler-1.12.5
+Installing ri documentation for bundler-1.12.5
+Parsing documentation for sprockets-3.7.0
+Installing ri documentation for sprockets-3.7.0
+Parsing documentation for sprockets-rails-3.1.1
+Installing ri documentation for sprockets-rails-3.1.1
+Parsing documentation for rails-4.2.6
+Installing ri documentation for rails-4.2.6
+Done installing documentation for i18n, thread_safe, tzinfo, concurrent-ruby, activesupport, rack, rack-test, mini_portile2, pkg-config, nokogiri, loofah, rails-html-sanitizer, rails-deprecated_sanitizer, rails-dom-testing, builder, erubis, actionview, actionpack, activemodel, arel, activerecord, globalid, activejob, mime-types-data, mime-types, mail, actionmailer, thor, railties, bundler, sprockets, sprockets-rails, rails after 267 seconds
+33 gems installed
+iMac-de-Juanjo:~ Juanjo$ rbenv rehash
+iMac-de-Juanjo:~ Juanjo$ rails -v
+Rails 4.2.6
+iMac-de-Juanjo:~ Juanjo$ brew install postgresql
+==> Auto-updated Homebrew!
+Updated Homebrew from bd1ded9 to 105d7aa.
+Updated 1 tap (homebrew/core).
+No changes to formulae.
+==> Installing dependencies for postgresql: readline
+==> Installing postgresql dependency: readline
+==> Downloading https://homebrew.bintray.com/bottles/readline-6.3.8.el_capitan.bottle.tar.gz
+######################################################################## 100,0%
+==> Pouring readline-6.3.8.el_capitan.bottle.tar.gz
+==> Caveats
+This formula is keg-only, which means it was not symlinked into /usr/local.
+
+OS X provides the BSD libedit library, which shadows libreadline.
+In order to prevent conflicts when programs look for libreadline we are
+defaulting this GNU Readline installation to keg-only.
+
+
+Generally there are no consequences of this for you. If you build your
+own software and it requires this formula, you'll need to add to your
+build variables:
+
+    LDFLAGS:  -L/usr/local/opt/readline/lib
+    CPPFLAGS: -I/usr/local/opt/readline/include
+
+==> Summary
+🍺  /usr/local/Cellar/readline/6.3.8: 46 files, 2.0M
+==> Installing postgresql
+==> Downloading https://homebrew.bintray.com/bottles/postgresql-9.5.4.el_capitan.bottle.tar.gz
+######################################################################## 100,0%
+==> Pouring postgresql-9.5.4.el_capitan.bottle.tar.gz
+==> Using the sandbox
+==> /usr/local/Cellar/postgresql/9.5.4/bin/initdb /usr/local/var/postgres
+==> Caveats
+If builds of PostgreSQL 9 are failing and you have version 8.x installed,
+you may need to remove the previous version first. See:
+  https://github.com/Homebrew/homebrew/issues/2510
+
+To migrate existing data from a previous major version (pre-9.0) of PostgreSQL, see:
+  https://www.postgresql.org/docs/9.5/static/upgrading.html
+
+To migrate existing data from a previous minor version (9.0-9.4) of PostgreSQL, see:
+  https://www.postgresql.org/docs/9.5/static/pgupgrade.html
+
+  You will need your previous PostgreSQL installation from brew to perform `pg_upgrade`.
+  Do not run `brew cleanup postgresql` until you have performed the migration.
+
+To have launchd start postgresql now and restart at login:
+  brew services start postgresql
+Or, if you don't want/need a background service you can just run:
+  postgres -D /usr/local/var/postgres
+==> Summary
+🍺  /usr/local/Cellar/postgresql/9.5.4: 3,147 files, 35M
+iMac-de-Juanjo:~ Juanjo$ ln -sfv /usr/local/opt/postgresql/*plist ~/Library/LaunchAgents
+/Users/Juanjo/Library/LaunchAgents/homebrew.mxcl.postgresql.plist -> /usr/local/opt/postgresql/homebrew.mxcl.postgresql.plist
+iMac-de-Juanjo:~ Juanjo$ launchctl load ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
+iMac-de-Juanjo:~ Juanjo$ rails new myapp
+      create  
+      create  README.rdoc
+      create  Rakefile
+      create  config.ru
+      create  .gitignore
+      create  Gemfile
+      create  app
+      create  app/assets/javascripts/application.js
+      create  app/assets/stylesheets/application.css
+      create  app/controllers/application_controller.rb
+      create  app/helpers/application_helper.rb
+      create  app/views/layouts/application.html.erb
+      create  app/assets/images/.keep
+      create  app/mailers/.keep
+      create  app/models/.keep
+      create  app/controllers/concerns/.keep
+      create  app/models/concerns/.keep
+      create  bin
+      create  bin/bundle
+      create  bin/rails
+      create  bin/rake
+      create  bin/setup
+      create  config
+      create  config/routes.rb
+      create  config/application.rb
+      create  config/environment.rb
+      create  config/secrets.yml
+      create  config/environments
+      create  config/environments/development.rb
+      create  config/environments/production.rb
+      create  config/environments/test.rb
+      create  config/initializers
+      create  config/initializers/assets.rb
+      create  config/initializers/backtrace_silencers.rb
+      create  config/initializers/cookies_serializer.rb
+      create  config/initializers/filter_parameter_logging.rb
+      create  config/initializers/inflections.rb
+      create  config/initializers/mime_types.rb
+      create  config/initializers/session_store.rb
+      create  config/initializers/wrap_parameters.rb
+      create  config/locales
+      create  config/locales/en.yml
+      create  config/boot.rb
+      create  config/database.yml
+      create  db
+      create  db/seeds.rb
+      create  lib
+      create  lib/tasks
+      create  lib/tasks/.keep
+      create  lib/assets
+      create  lib/assets/.keep
+      create  log
+      create  log/.keep
+      create  public
+      create  public/404.html
+      create  public/422.html
+      create  public/500.html
+      create  public/favicon.ico
+      create  public/robots.txt
+      create  test/fixtures
+      create  test/fixtures/.keep
+      create  test/controllers
+      create  test/controllers/.keep
+      create  test/mailers
+      create  test/mailers/.keep
+      create  test/models
+      create  test/models/.keep
+      create  test/helpers
+      create  test/helpers/.keep
+      create  test/integration
+      create  test/integration/.keep
+      create  test/test_helper.rb
+      create  tmp/cache
+      create  tmp/cache/assets
+      create  vendor/assets/javascripts
+      create  vendor/assets/javascripts/.keep
+      create  vendor/assets/stylesheets
+      create  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/
+Fetching version metadata from https://rubygems.org/
+Fetching dependency metadata from https://rubygems.org/
+Resolving dependencies....
+Installing rake 11.2.2
+Using i18n 0.7.0
+Using json 1.8.3
+Installing minitest 5.9.0
+Using thread_safe 0.3.5
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using pkg-config 1.1.7
+Using rack 1.6.4
+Using mime-types-data 3.2016.0521
+Using arel 6.0.3
+Installing debug_inspector 0.0.2 with native extensions
+Using bundler 1.12.5
+Installing byebug 9.0.5 with native extensions
+Installing coffee-script-source 1.10.0
+Installing execjs 2.7.0
+Using thor 0.19.1
+Using concurrent-ruby 1.0.2
+Installing multi_json 1.12.1
+Installing sass 3.4.22
+Installing tilt 2.0.5
+Installing spring 1.7.2
+Installing sqlite3 1.3.11 with native extensions
+Installing turbolinks-source 5.0.0
+Installing rdoc 4.2.2
+Using tzinfo 1.2.2
+Using nokogiri 1.6.8
+Using rack-test 0.6.3
+Using mime-types 3.1
+Installing binding_of_caller 0.7.2 with native extensions
+Installing coffee-script 2.4.1
+Installing uglifier 3.0.1
+Using sprockets 3.7.0
+Installing turbolinks 5.0.1
+Installing sdoc 0.4.1
+Using activesupport 4.2.6
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.6
+Installing jbuilder 2.6.0
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using activejob 4.2.6
+Using activerecord 4.2.6
+Using actionview 4.2.6
+Using actionpack 4.2.6
+Using actionmailer 4.2.6
+Using railties 4.2.6
+Using sprockets-rails 3.1.1
+Installing coffee-rails 4.1.1
+Installing jquery-rails 4.1.1
+Using rails 4.2.6
+Installing sass-rails 5.0.6
+Installing web-console 2.3.0
+Bundle complete! 12 Gemfile dependencies, 57 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+Post-install message from rdoc:
+Depending on your version of ruby, you may need to install ruby rdoc/ri data:
+
+<= 1.8.6 : unsupported
+ = 1.8.7 : gem install rdoc-data; rdoc-data --install
+ = 1.9.1 : gem install rdoc-data; rdoc-data --install
+>= 1.9.2 : nothing to do! Yay!
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+iMac-de-Juanjo:~ Juanjo$ rails new myapp -d postgresql
+       exist  
+   identical  README.rdoc
+   identical  Rakefile
+   identical  config.ru
+    conflict  .gitignore
+Overwrite /Users/Juanjo/myapp/.gitignore? (enter "h" for help) [Ynaqdh] h
+        Y - yes, overwrite
+        n - no, do not overwrite
+        a - all, overwrite this and all others
+        q - quit, abort
+        d - diff, show the differences between the old and the new
+        h - help, show this help
+Overwrite /Users/Juanjo/myapp/.gitignore? (enter "h" for help) [Ynaqdh] Y
+       force  .gitignore
+    conflict  Gemfile
+Overwrite /Users/Juanjo/myapp/Gemfile? (enter "h" for help) [Ynaqdh] Y
+       force  Gemfile
+       exist  app
+   identical  app/assets/javascripts/application.js
+   identical  app/assets/stylesheets/application.css
+   identical  app/controllers/application_controller.rb
+   identical  app/helpers/application_helper.rb
+   identical  app/views/layouts/application.html.erb
+   identical  app/assets/images/.keep
+   identical  app/mailers/.keep
+   identical  app/models/.keep
+   identical  app/controllers/concerns/.keep
+   identical  app/models/concerns/.keep
+       exist  bin
+   identical  bin/bundle
+    conflict  bin/rails
+Overwrite /Users/Juanjo/myapp/bin/rails? (enter "h" for help) [Ynaqdh] Y
+       force  bin/rails
+    conflict  bin/rake
+Overwrite /Users/Juanjo/myapp/bin/rake? (enter "h" for help) [Ynaqdh] Y
+       force  bin/rake
+   identical  bin/setup
+       exist  config
+   identical  config/routes.rb
+   identical  config/application.rb
+   identical  config/environment.rb
+    conflict  config/secrets.yml
+Overwrite /Users/Juanjo/myapp/config/secrets.yml? (enter "h" for help) [Ynaqdh] Y
+       force  config/secrets.yml
+       exist  config/environments
+   identical  config/environments/development.rb
+   identical  config/environments/production.rb
+   identical  config/environments/test.rb
+       exist  config/initializers
+   identical  config/initializers/assets.rb
+   identical  config/initializers/backtrace_silencers.rb
+   identical  config/initializers/cookies_serializer.rb
+   identical  config/initializers/filter_parameter_logging.rb
+   identical  config/initializers/inflections.rb
+   identical  config/initializers/mime_types.rb
+   identical  config/initializers/session_store.rb
+   identical  config/initializers/wrap_parameters.rb
+       exist  config/locales
+   identical  config/locales/en.yml
+   identical  config/boot.rb
+    conflict  config/database.yml
+Overwrite /Users/Juanjo/myapp/config/database.yml? (enter "h" for help) [Ynaqdh] Y
+       force  config/database.yml
+       exist  db
+   identical  db/seeds.rb
+       exist  lib
+       exist  lib/tasks
+   identical  lib/tasks/.keep
+       exist  lib/assets
+   identical  lib/assets/.keep
+       exist  log
+   identical  log/.keep
+       exist  public
+   identical  public/404.html
+   identical  public/422.html
+   identical  public/500.html
+   identical  public/favicon.ico
+   identical  public/robots.txt
+       exist  test/fixtures
+   identical  test/fixtures/.keep
+       exist  test/controllers
+   identical  test/controllers/.keep
+       exist  test/mailers
+   identical  test/mailers/.keep
+       exist  test/models
+   identical  test/models/.keep
+       exist  test/helpers
+   identical  test/helpers/.keep
+       exist  test/integration
+   identical  test/integration/.keep
+   identical  test/test_helper.rb
+       exist  tmp/cache
+       exist  tmp/cache/assets
+       exist  vendor/assets/javascripts
+   identical  vendor/assets/javascripts/.keep
+       exist  vendor/assets/stylesheets
+   identical  vendor/assets/stylesheets/.keep
+         run  bundle install
+Fetching gem metadata from https://rubygems.org/
+Fetching version metadata from https://rubygems.org/
+Fetching dependency metadata from https://rubygems.org/
+Resolving dependencies...
+Using rake 11.2.2
+Using i18n 0.7.0
+Using json 1.8.3
+Using minitest 5.9.0
+Using thread_safe 0.3.5
+Using builder 3.2.2
+Using erubis 2.7.0
+Using mini_portile2 2.1.0
+Using pkg-config 1.1.7
+Using rack 1.6.4
+Using mime-types-data 3.2016.0521
+Using arel 6.0.3
+Using debug_inspector 0.0.2
+Using bundler 1.12.5
+Using byebug 9.0.5
+Using coffee-script-source 1.10.0
+Using execjs 2.7.0
+Using thor 0.19.1
+Using concurrent-ruby 1.0.2
+Using multi_json 1.12.1
+Installing pg 0.18.4 with native extensions
+Using sass 3.4.22
+Using tilt 2.0.5
+Using spring 1.7.2
+Using turbolinks-source 5.0.0
+Using rdoc 4.2.2
+Using tzinfo 1.2.2
+Using nokogiri 1.6.8
+Using rack-test 0.6.3
+Using mime-types 3.1
+Using binding_of_caller 0.7.2
+Using coffee-script 2.4.1
+Using uglifier 3.0.1
+Using sprockets 3.7.0
+Using turbolinks 5.0.1
+Using sdoc 0.4.1
+Using activesupport 4.2.6
+Using loofah 2.0.3
+Using mail 2.6.4
+Using rails-deprecated_sanitizer 1.0.3
+Using globalid 0.3.7
+Using activemodel 4.2.6
+Using jbuilder 2.6.0
+Using rails-html-sanitizer 1.0.3
+Using rails-dom-testing 1.0.7
+Using activejob 4.2.6
+Using activerecord 4.2.6
+Using actionview 4.2.6
+Using actionpack 4.2.6
+Using actionmailer 4.2.6
+Using railties 4.2.6
+Using sprockets-rails 3.1.1
+Using coffee-rails 4.1.1
+Using jquery-rails 4.1.1
+Using rails 4.2.6
+Using sass-rails 5.0.6
+Using web-console 2.3.0
+Bundle complete! 12 Gemfile dependencies, 57 gems now installed.
+Use `bundle show [gemname]` to see where a bundled gem is installed.
+         run  bundle exec spring binstub --all
+* bin/rake: spring inserted
+* bin/rails: spring inserted
+iMac-de-Juanjo:~ Juanjo$ cd myapp
+iMac-de-Juanjo:myapp Juanjo$ rake db:create
+iMac-de-Juanjo:myapp Juanjo$ rails server
+=> Booting WEBrick
+=> Rails 4.2.6 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+=> Ctrl-C to shutdown server
+[2016-08-19 16:50:31] INFO  WEBrick 1.3.1
+[2016-08-19 16:50:31] INFO  ruby 2.3.1 (2016-04-26) [x86_64-darwin15]
+[2016-08-19 16:50:31] INFO  WEBrick::HTTPServer#start: pid=47150 port=3000
+
+
+Started GET "/" for ::1 at 2016-08-19 16:54:06 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/Juanjo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 19ms (Views: 11.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/info/properties" for ::1 at 2016-08-19 16:58:11 +0200
+Processing by Rails::InfoController#properties as */*
+  Rendered /Users/Juanjo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/railties-4.2.6/lib/rails/templates/rails/info/properties.html.erb (0.4ms)
+Completed 200 OK in 59ms (Views: 30.0ms | ActiveRecord: 1.2ms)
+bin/rails generate
+bin/rails         
+ 

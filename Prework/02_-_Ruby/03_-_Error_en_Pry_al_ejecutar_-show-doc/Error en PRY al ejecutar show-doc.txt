@@ -1,0 +1,23 @@
+Last login: Sun Aug 21 11:48:46 on ttys000
+iMac-de-Juanjo:~ Juanjo$ pry
+[1] pry(main)> show-doc "a string".upcase
+Error: Cannot locate this method: upcase. Try `gem-install pry-doc` to get access to Ruby Core documentation.
+[2] pry(main)> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

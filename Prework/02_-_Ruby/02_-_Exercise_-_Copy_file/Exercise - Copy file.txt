@@ -1,0 +1,24 @@
+Last login: Sat Aug 20 12:16:24 on ttys000
+iMac-de-Juanjo:~ Juanjo$ cd Desktop
+iMac-de-Juanjo:Desktop Juanjo$ cd Pre-Work
+iMac-de-Juanjo:Pre-Work Juanjo$ cd Ruby
+iMac-de-Juanjo:Ruby Juanjo$ cd Exercise_-_Copy_file
+iMac-de-Juanjo:Exercise_-_Copy_file Juanjo$ ruby exercise.rb
+What is the source file (source1.txt or source2.txt)?
+source1.txt
+What name do you like for the destination file?
+destination.txt
+iMac-de-Juanjo:Exercise_-_Copy_file Juanjo$ 
+
+
+
+
+
+
+
+
+
+
+
+
+

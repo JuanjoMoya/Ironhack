@@ -1,0 +1,7 @@
+<ul>
+  <% @todo_array.each do |todo| %>
+    <li><%= todo.description %></li>
+    <li><%= todo.time %></li>
+    <li><%= todo.completed %></li>
+  <% end %>
+</ul>
