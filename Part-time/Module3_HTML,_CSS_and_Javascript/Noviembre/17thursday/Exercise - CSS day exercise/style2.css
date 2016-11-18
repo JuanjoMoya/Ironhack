@@ -1,0 +1,123 @@
+body {
+  background-color: gainsboro;
+  width: 500px;
+  height: 500px;
+}
+
+.blue {
+  color: blue;
+}
+
+.imagen_estandard {
+  float: left;
+  margin-right: 10px;
+}
+
+.box1{
+  color: orange;
+}
+
+.box2{
+  color: red;
+  border: 1px solid grey;
+  overflow: auto;
+  padding: 2px;
+}
+
+.box3{
+  border: 1px solid grey;
+  overflow: auto;
+  padding: 2px;
+  color: grey;
+
+}
+
+.box4{
+  border: 1px solid grey;
+  overflow: auto;
+  padding: 2px;
+  color: grey;
+
+}
+
+.box5{
+  border: 1px solid blue;
+  margin: 10px;
+  border-radius: 40px;
+  overflow: auto;
+  padding: 10px;
+  color: blue;
+  width: 80px;
+}
+
+
+
+.container1 {
+  border-radius: 10px;
+  overflow: auto;
+  margin: 10px;
+  width: 300px;
+  padding: 2px;
+}
+
+.container2 {
+  /*border: 1px solid black;*/
+  background-color: white;
+  border-radius: 10px;
+  overflow: auto;
+  margin: 10px;
+  width: 500px;
+  padding: 2px;
+
+}
+
+.container2a {
+  /*border: 1px solid black;*/
+  border-radius: 10px;
+  overflow: auto;
+  margin: 10px;
+  width: 300px;
+  padding: 2px;
+
+}
+
+.container3 {
+  /*border: 1px solid black;*/
+  border-radius: 10px;
+  overflow: auto;
+  margin: 10px;
+  width: 300px;
+  padding: 2px;
+}
+
+.container3a {
+  /*border: 1px solid black;*/
+  overflow: auto;
+  border-radius: 10px;
+  overflow: auto;
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+
+}
+
+.container3b {
+  /*border: 1px solid black;*/
+  border-radius: 10px;
+  overflow: auto;
+  margin: 10px;
+  width: 300px;
+  padding: 2px;
+  font-size: large;
+  float: left;
+
+}
+
+.container3c {
+  /*border: 1px solid black;*/
+  border-radius: 10px;
+  margin: 10px;
+  width: 300px;
+  padding: 10px;
+}
+

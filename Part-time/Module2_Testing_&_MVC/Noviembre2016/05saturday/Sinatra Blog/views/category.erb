@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+  <link rel="stylesheet" type="text/css" href="/main.css"
+</head>
+<body>
+  <h1>List of posts by <%= @category %></h1>
+  <ul>
+    <%@posts_by_category.each do |post|%>
+	<p><strong><%=post.title%></strong></p>
+	<p><%=post.text%></p>
+	<br>
+    <%end%>
+  </ul>
+</body>
+</html>

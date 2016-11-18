@@ -23,6 +23,7 @@ class TodoList
   attr_reader :tasks
 
   def initialize(user)
+    @todo_store = YAML::Store.new("./public/tasks.yml")
     @tasks = []
     @user = user
   end
@@ -49,7 +50,29 @@ class TodoList
       sorted_tasks = @tasks.sort { | task1, task2 | task1.created_at <=> task2.created_at }
 	  end
   end
+
+  # def save
+	#   @todo_store.transaction do
+	#       @todo_store[@user] = @tasks
+	#   end
+	# end
+  #
+	# def load_tasks
+	# 	@tasks = YAML.load_file('tasks.yml')[@user]
+	# end
 end
+
+# todo_list = TodoList.new("Josh")
+# task = Task.new("Walk the dog")
+# task2 = Task.new("Buy the milk")
+# task3 = Task.new("Make my todo list into a web app")
+# todo_list.save
+#
+#
+# todo_list = TodoList.new("Josh")
+# todo_list.load_tasks
+# puts todo_list.tasks.length
+# 3
 
 
 
