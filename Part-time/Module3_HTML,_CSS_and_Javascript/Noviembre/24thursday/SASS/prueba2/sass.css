@@ -1,0 +1,40 @@
+/* This is a comment*/
+.other_container {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.container {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.container > li {
+  color: blue;
+}
+
+.item3 .container {
+  background: yellow;
+}
+
+.item {
+  color: grey;
+  font-family: sans-serif;
+  background: #0A77E9;
+  width: 150px;
+  padding: 5px 15px;
+  height: 50px;
+}
+
+.item2 {
+  color: grey;
+  font-family: sans-serif;
+  background: #0A77E9;
+  width: 60px;
+  padding: 5px 5px;
+  height: 50px;
+}

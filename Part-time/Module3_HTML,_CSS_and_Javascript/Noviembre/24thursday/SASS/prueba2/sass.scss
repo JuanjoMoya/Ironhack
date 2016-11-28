@@ -1,0 +1,43 @@
+
+/* This is a comment*/
+
+@import "other";
+
+$color_white: grey;
+
+.container {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+
+  > li {
+    color: blue;
+  }
+
+  .item3 & {
+    background: yellow;
+  }
+}
+
+@function var_num5($num) {
+  @return ($num/2) + px;
+}
+
+.item{
+  color: $color_white;
+  font-family: sans-serif;
+  background: #0A77E9;
+  width: 150px;
+  padding: var_num5(10) 15px;
+  height: 50px;
+}
+
+.item2{
+  color: $color_white;
+  font-family: sans-serif;
+  background: #0A77E9;
+  width: 60px;
+  padding: 5px 5px;
+  height: 50px;
+}

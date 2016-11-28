@@ -1,0 +1,16 @@
+// -----------------------------------------------------------------------------
+// Estilos básicos de nuestra web. La base.
+// -----------------------------------------------------------------------------
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+a {
+  
+  text-decoration: none;
+}

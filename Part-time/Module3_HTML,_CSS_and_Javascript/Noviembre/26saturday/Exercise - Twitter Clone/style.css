@@ -1,0 +1,74 @@
+#mytwitter {
+  color: #1da1f2;
+  padding-right: 2px;
+  float: left;
+  margin-right: 0;
+  /*width: 23px;
+  height: 23px;*/
+  font-size: 21px;
+}
+
+#ironhackicon {
+  position: absolute;
+  left: 60px;
+  top: 200px;
+  z-index: 1;
+  border-radius: 12px;
+  border: 5px solid white;
+}
+
+.container-fluid {
+  background-color: white;
+}
+
+.mysearch {
+  background-color: #f5f8fa;
+  border-radius: 21px;
+}
+
+.glyphicon-search {
+  color: grey;
+}
+
+.totals-list {
+  /*display: inline-block;*/
+  display: flex;
+  flex-direction: row;
+}
+
+.detail-total {
+  display: block;
+  flex-direction: column;
+  margin: 5px;
+  text-align: center;
+}
+
+.tot-num {
+  font-size: 18px;
+}
+
+.tot-col {
+  color: #009999 !important;
+}
+
+/*.total1 {
+  border: 1px solid grey;
+  height: 60px;
+}
+
+.total2 {
+  border: 1px solid grey;
+  height: 60px;
+}*/
+
+.totals {
+  background-color: white;
+  width: 1260px;
+  height: 100px;
+}
+
+.content {
+  background-color: #f5f8fa;
+  width: 1260px;
+  height: 600px;
+}

@@ -1,0 +1,6 @@
+.other_container {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
