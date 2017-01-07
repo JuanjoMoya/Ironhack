@@ -8,6 +8,27 @@
   font-size: 21px;
 }
 
+#follow {
+  color: #1da1f2;
+  /*padding-right: 2px;
+  float: left;
+  margin-right: 0;
+  font-size: 21px;*/
+  /*position: absolute;
+  right: 100px;*/
+}
+
+.totals {
+  background-color: white;
+}
+
+.button-follow {
+  /*position: absolute;*/
+  right: 60;
+  bottom: 0;
+  /*padding-bottom: 0;*/
+}
+
 #ironhackicon {
   position: absolute;
   left: 60px;
@@ -30,8 +51,24 @@
   color: grey;
 }
 
+.box-total1 {
+  background-color: white;
+  width: 316px;
+  height: 55px;
+}
+
+.box-total2 {
+  background-color: white;
+  width: 330px;
+  height: 55px;
+  /*display: relative;*/
+  top: 20px;
+}
+
+
 .totals-list {
   /*display: inline-block;*/
+  background-color: white;
   display: flex;
   flex-direction: row;
 }
@@ -42,6 +79,19 @@
   margin: 5px;
   text-align: center;
 }
+
+.detail-total2 {
+  display: block;
+  flex-direction: column;
+  margin: 15px;
+  text-align: right;
+  background-color: white;
+}
+
+.total3 {
+  background-color: white;
+}
+
 
 .tot-num {
   font-size: 18px;
