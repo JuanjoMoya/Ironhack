@@ -1,0 +1,11 @@
+<h1>List of contacts searched that begin by letter <%= @first_letter %></h1>
+
+<ul>
+  <% @contacts.each do |contact| %>
+    <% if contact.name.chars.first.downcase == @first_letter.downcase %>
+      <li><%= contact.name %></li>
+    <% end %>
+  <% end %>
+</ul>
+
+<%= link_to "All contacts", "/contacts" %>
