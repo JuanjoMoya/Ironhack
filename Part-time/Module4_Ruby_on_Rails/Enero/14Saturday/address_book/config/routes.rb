@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get '/contacts/new', to: 'contacts#new'
   post("/contacts", :to => "contacts#create")
   get '/contacts', to: 'contacts#index'
-  get '/contacts/:id', to: 'contacts#show'
   post("/contacts/create_favorite", :to => "contacts#favorite")
   get '/contacts/favorite_contacts', to: 'contacts#favorite_contacts'
   post("/contacts/search", :to => "contacts#search")
+  get '/contacts/:id', to: 'contacts#show'
 end
