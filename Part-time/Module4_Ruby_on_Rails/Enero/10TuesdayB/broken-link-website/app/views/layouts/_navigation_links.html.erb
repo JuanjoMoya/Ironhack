@@ -1,0 +1,18 @@
+<%# add navigation links to this file %>
+Links will go here
+<li>
+  <!-- Home Link -->
+  <% unless current_page?('/')%><%= link_to "Home", "/" %> <%end%>
+</li>
+<li>
+	<!-- About Link -->
+  <% unless current_page?('/about')%><%= link_to "About", about_path %> <%end%>
+</li>
+<li>
+	<!-- Blog link -->
+  <% unless current_page?(controller: 'visitors', action: 'blog')%><%= link_to "Blog", blog_path %> <%end%>
+</li>
+<li>
+	<!-- Contact Link -->
+  <% unless current_page?(action: 'contact')%><%= link_to "Contact", contact_path %> <%end%>
+</li>
