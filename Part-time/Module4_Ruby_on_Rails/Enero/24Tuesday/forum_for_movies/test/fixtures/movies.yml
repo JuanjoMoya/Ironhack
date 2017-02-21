@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: 
+  poster: 
+  year: 
+  synopsis: MyText
+
+two:
+  title: 
+  poster: 
+  year: 
+  synopsis: MyText

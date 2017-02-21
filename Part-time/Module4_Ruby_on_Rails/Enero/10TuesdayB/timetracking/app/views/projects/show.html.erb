@@ -1,3 +1,4 @@
 <ul>
-  <li><%= @my_project.name %> <% if @my_project.description %> - <%= @my_project.description %> <% end %></li>  
+  <li><%= @my_project.name %> <% if @my_project.description %> - <%= @my_project.description %> <% end %></li>
 </ul>
+<%= image_tag @my_project.logo.url(:medium) %>

@@ -15,7 +15,7 @@ Project.create!(name: 'buy the dog')
 Project.create!(name: 'walk the milk')
 Project.create!(name: 'Running', description: 'Be faster')
 
-TimeEntry.create! project_id: 1, hours: 2, minutes: 15, comments: "comment1"
-TimeEntry.create! project_id: 2, hours: 3, minutes: 25, comments: "comment2"
-TimeEntry.create! project_id: 3, hours: 4, minutes: 35, comments: "comment3"
-TimeEntry.create! project_id: 4, hours: 5, minutes: 45, comments: "comment4"
+TimeEntry.create! project_id: 1, hours: 2, minutes: 15, comments: "comment1", date: Date.new(2016, 12, 24)
+TimeEntry.create! project_id: 2, hours: 3, minutes: 25, comments: "comment2", date: Date.new(2017, 01, 24)
+TimeEntry.create! project_id: 3, hours: 4, minutes: 35, comments: "comment3", date: Date.new(2016, 01, 07)
+TimeEntry.create! project_id: 4, hours: 5, minutes: 45, comments: "comment4", date: Date.new(2016, 01, 21)

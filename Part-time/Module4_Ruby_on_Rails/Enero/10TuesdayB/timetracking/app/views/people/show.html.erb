@@ -1,0 +1,16 @@
+<h1><%= @person.name %></h1>
+<br>
+<%= form_for @person, url: participations_path, method: :post do [f] %>
+  <%= f.collection_select :projects, @available_projects, :id, :name %>
+  <% f.submit 'add project' %>
+<% end %>
+
+<h2> Projects involved <%= @person.name %> </h2>
+
+  <ul>
+    <% @person.projects.each do [project] %>
+      <li>
+        <%= project.name %>
+      </li>
+    <% end %>
+  </ul>

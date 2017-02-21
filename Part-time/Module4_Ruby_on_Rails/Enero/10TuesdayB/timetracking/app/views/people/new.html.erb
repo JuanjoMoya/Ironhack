@@ -1,0 +1,13 @@
+<h1>Add a person</h1>
+<%= form_for @person do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+
+<%= form_for Participations.new, do |f| %>
+<%= f.collection_select :person_id, @participation.people, html_options: {class: "", id: ""} %>
+<%= <'lo mismo'>, @participations.projects %>
+<% end %>

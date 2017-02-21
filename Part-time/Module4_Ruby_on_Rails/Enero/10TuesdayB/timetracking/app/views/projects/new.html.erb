@@ -1,10 +1,13 @@
 <h1>Add a project</h1>
-<%= form_for @my_project do |f| %>
+<%= form_for @my_project, :html =>{:multipart => true} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
-
+  <br>
   <%= f.label :description %>
   <%= f.text_area :description %>
-
+  <br>
+  <%= f.label :logo %>
+  <%= f.file_field :logo %>
+  <br>
   <%= f.button %>
 <% end %>

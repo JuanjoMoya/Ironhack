@@ -1,0 +1,5 @@
+<h1><%= @user.name %></h1>
+<h3><%= @user.email_address %></h3>
+<p><%= link_to "Back to the list", users_list_path %></p>
+<p><%= link_to "Create a new user", users_new_path %></p>
+<p><%= link_to "Delete the user", users_destroy_path(@user.id), method: :delete, data: {confirm: "Are you sure?"} %></p>

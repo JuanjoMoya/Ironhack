@@ -7,8 +7,8 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<h1>Active user id: <%= session[:user_id]%></h1>
 <%= yield %>
-
+<%= flash_message %>
 </body>
 </html>

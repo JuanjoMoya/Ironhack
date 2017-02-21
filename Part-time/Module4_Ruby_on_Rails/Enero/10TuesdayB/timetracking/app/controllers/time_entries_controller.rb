@@ -14,6 +14,7 @@ class TimeEntriesController < ApplicationController
     # @my_entry = @my_project.time_entries.new(hours: params[:time_entry][:hours], minutes: params[:time_entry][:minutes], date: params[:time_entry][:date])
     @my_entry = @my_project.time_entries.new(entry_params)
     if @my_entry.save
+      flash[:notice] = "Project created sucessfully"
       redirect_to "/projects/#{@my_project.id}/time_entries"
     else
       render "new"
@@ -41,6 +42,7 @@ class TimeEntriesController < ApplicationController
     @my_project = Project.find_by(id: params[:project_id])
     @my_entry = @my_project.time_entries.find_by(id: params[:id])
     @my_entry.destroy
+    flash[:alert] = "Project destroyed sucessfully"
     redirect_to "/projects/#{@my_project.id}/time_entries"
   end
 

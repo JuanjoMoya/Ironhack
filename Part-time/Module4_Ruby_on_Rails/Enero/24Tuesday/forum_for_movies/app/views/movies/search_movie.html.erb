@@ -1,0 +1,5 @@
+<form action='/search_movie' method='/POST'>
+  <input type="text" name="title_to_search" placeholder="title_to_search">
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <button type="submit"> Search </button>
+</form>

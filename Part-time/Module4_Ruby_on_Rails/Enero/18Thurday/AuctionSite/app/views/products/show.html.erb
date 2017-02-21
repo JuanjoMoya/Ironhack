@@ -1,0 +1,55 @@
+<h1><%= @product.title %></h1>
+<h3><%= @product.description %></h3>
+<p>Bids will end on <%= @product.deadline %></h3>
+<p><%= link_to "Back to the list", products_path %></p>
+<p><%= link_to "Add a new product", products_new_path %></p>
+<p><%= link_to("Delete the product", products_destroy_path(@product.user_id, @product.id), method: :delete, data: {confirm: "Are you sure?"}) %></p>
+
+<hr />
+ <h4>Bids</h4>
+
+<% if flash[:alert] %>
+ <p style="color:red"><%= flash[:alert] %></p>
+<% end %>
+
+
+ <% if @bids.size == 0 && @deadline  > DateTime.now %>
+ 	 <p>There are no bids yet</p>
+ <% elsif @bids.size > 0 && @deadline > DateTime.now %>
+	 <ul>
+		 <% @bids.each do |bid| %>
+		 	<li><%= bid.amount %> - by <%= bid.user.name %></li>
+		 <% end %>
+	 </ul>
+	 <p>At the minute, <b><%= @bids[0].user.name %></b> is in the lead!</p>
+ <% elsif @winner %>
+ 	 <p>Bids ended on <%= @deadline.strftime("%m/%d/%Y") %>, <b><%= @winner.user.name %></b> wins the bid with an offer of <%= @winner.amount %></p>
+ <% else  %>
+ 	 <p>Bids ended on <%= @deadline.strftime("%m/%d/%Y") %>, but nobody wanted this thing.</p>
+ <% end %>
+ <% if @deadline > DateTime.now %>
+ 	 <p>Bids will end on <%= @deadline.strftime("%m/%d/%Y") %></h3>
+ <% end %>
+
+<hr />
+
+<%= form_for [@user, @new_bid] do |f| %>
+
+  <%= f.label :amount %><br>
+
+  <%= f.text_field :amount%>
+
+  <br>
+
+  <%= f.label 'enter user email address' %> <br>
+
+  <%= f.text_field :user_id %>
+
+  <%= f.hidden_field :product_id, :value => params[:id] %>
+
+
+  <br />
+
+  <%= f.button %>
+
+<% end %>

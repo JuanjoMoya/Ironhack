@@ -13,7 +13,7 @@ class ProjectsController < ApplicationController
     @my_project = Project.new
   end
   def create
-    @my_project = Project.new(:name => params[:project][:name], :description => params[:project][:description])
+    @my_project = Project.new(:name => params[:project][:name], :description => params[:project][:description], :logo => params[:project][:logo])
     @my_project.save
 
     redirect_to "/projects/#{@my_project.id}"
